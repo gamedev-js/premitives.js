@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Examples</title>
+    <meta charset="utf-8">
+
+    <style>
+      body {
+        background: #333;
+        color: #888;
+        margin: 0px;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .view {
+        position: relative;
+        flex: 1;
+        margin: 5px;
+      }
+
+      .toolbar {
+        display: flex;
+
+        margin: 5px;
+        margin-top: 0px;
+
+        font-size: 12px;
+      }
+
+      .toolbar > * {
+        margin-right: 10px;
+      }
+
+      .toolbar > *:last-child {
+        margin-right: 0px;
+      }
+
+      .fit {
+        position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+      }
+
+      canvas {
+        background: #09f;
+      }
+
+      canvas:focus {
+        outline: 0;
+      }
+    </style>
+
+    <script src="../node_modules/lstats.js/dist/lstats.min.js"></script>
+    <script src="../node_modules/input.js/dist/input.dev.js"></script>
+    <script src="../node_modules/vmath/dist/vmath.min.js"></script>
+    <script src="../node_modules/gfx.js/dist/gfx.dev.js"></script>
+    <script src="../dist/primitives.dev.js"></script>
+    <script src="./orbit.js"></script>
+    <script src="./draw.js"></script>
+    <script src="./resl.js"></script>
+    <script src="./shell.js"></script>
+  </head>
+
+  <body class="fit">
+    <div id="view" class="view">
+      <!--<canvas id="canvas" class="fit" tabindex="-1"></canvas>-->
+    </div>
+    <div class="toolbar">
+      <div>
+        <input type="checkbox" id="showFPS"></input>FPS
+      </div>
+      <span style="flex: 1"></span>
+      <select id="exampleList">
+        <option value="./src/box.js">Box</option>
+        <option value="./src/cone.js">Cone</option>
+        <option value="./src/cylinder.js">Cylinder</option>
+        <option value="./src/plane.js">Plane</option>
+        <option value="./src/quad.js">Quad</option>
+        <option value="./src/sphere.js">Sphere</option>
+        <option value="./src/torus.js">Torus</option>
+      </select>
+    </div>
+  </body>
+</html>
