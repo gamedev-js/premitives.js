@@ -1,3 +1,8 @@
+let orbit = new window.Orbit(null, {
+  eye: window.vmath.vec3.new(0, 5, 10),
+  phi: window.vmath.toRadian(-30),
+});
+
 function _loadPromise(url) {
   return new Promise((resolve, reject) => {
     let xhr = new window.XMLHttpRequest();
@@ -51,10 +56,7 @@ function _load(view, url) {
       lock: true
     });
 
-    let orbit = new window.Orbit(window.input, {
-      eye: window.vmath.vec3.new(0, 5, 10),
-      phi: window.vmath.toRadian(-30),
-    });
+    orbit._input = window.input;
     let drawGrid = _grid(window.device, 100, 100, 100);
     let drawMesh = null;
     let lasttime = 0;
