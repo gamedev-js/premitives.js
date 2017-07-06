@@ -1,8 +1,9 @@
 {
   "name": "primitives.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Primitives for 3D Rendering",
   "main": "dist/primitives.js",
+  "jsnext:main": "index.js",
   "scripts": {
     "build:dev": "rollup -c ./script/rollup.config.js",
     "build:min": "uglifyjs ./dist/primitives.dev.js --mangle --source-map url=primitives.min.js.map -o ./dist/primitives.min.js",

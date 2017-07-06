@@ -12,7 +12,7 @@ let v3_u = vec3.new(0,1,0);
 let rotq = quat.create();
 let rotx = quat.create();
 let roty = quat.create();
-let rot = mat3.create();
+let rot33 = mat3.create();
 let front = vec3.create();
 let right = vec3.create();
 let up = vec3.create();
@@ -43,8 +43,10 @@ class Orbit {
     this._panX = 0;
     this._panY = 0;
     this._panZ = 0;
+
     this._curTheta = props.theta;
     this._curPhi = props.phi;
+
     this._curEye = vec3.clone(props.eye);
     this._theta = props.theta;
     this._phi = props.phi;
@@ -113,27 +115,25 @@ class Orbit {
     this._curPhi = lerp(this._curPhi, this._phi, dt * damping);
     this._curTheta = lerp(this._curTheta, this._theta, dt * damping);
 
-    //
-    let eye = this._eye;
-    let phi = this._curPhi;
-    let theta = this._curTheta;
-
-    let panX = this._panX;
-    let panY = this._panY;
-    let panZ = this._panZ;
-
     // phi == rot_x, theta == rot_y
     quat.identity(rotx);
     quat.identity(roty);
-
-    quat.rotateX(rotx, rotx, phi);
-    quat.rotateY(roty, roty, theta);
+    quat.rotateX(rotx, rotx, this._curPhi);
+    quat.rotateY(roty, roty, this._curTheta);
     quat.mul(rotq, roty, rotx);
-    mat3.fromQuat(rot, rotq);
 
-    vec3.transformMat3(front, v3_f, rot);
-    vec3.transformMat3(up, v3_u, rot);
-    vec3.transformMat3(right, v3_r, rot);
+    //
+    mat3.fromQuat(rot33, rotq);
+
+    vec3.transformMat3(front, v3_f, rot33);
+    vec3.transformMat3(up, v3_u, rot33);
+    vec3.transformMat3(right, v3_r, rot33);
+
+    //
+    let eye = this._eye;
+    let panX = this._panX;
+    let panY = this._panY;
+    let panZ = this._panZ;
 
     if (this._df !== 0) {
       vec3.scaleAndAdd(eye, eye, front, this._df * dt * moveSpeed);

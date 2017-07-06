@@ -1,6 +1,6 @@
 
 /*
- * primitives.js v1.0.0
+ * primitives.js v1.0.1
  * (c) 2017 @Johnny Wu
  * Released under the MIT License.
  */
