@@ -1,23 +1,8 @@
-import { wireframe, normals } from './lib/utils';
-import box from './lib/box';
-import cone from './lib/cone';
-import cylinder from './lib/cylinder';
-import plane from './lib/plane';
-import quad from './lib/quad';
-import sphere from './lib/sphere';
-import torus from './lib/torus';
-
-export default {
-  // utils
-  wireframe,
-  normals,
-
-  // shapes
-  box,
-  cone,
-  cylinder,
-  plane,
-  quad,
-  sphere,
-  torus,
-};
+export * from './lib/utils';
+export { default as box } from './lib/box';
+export { default as cone } from './lib/cone';
+export { default as cylinder } from './lib/cylinder';
+export { default as plane } from './lib/plane';
+export { default as quad } from './lib/quad';
+export { default as sphere } from './lib/sphere';
+export { default as torus } from './lib/torus';

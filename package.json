@@ -1,6 +1,6 @@
 {
   "name": "primitives.js",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Primitives for 3D Rendering",
   "main": "dist/primitives.js",
   "module" : "index.js",
