@@ -169,8 +169,7 @@ function _grid(device, width, length, seg) {
     vertexFmt,
     gfx.USAGE_STATIC,
     new Float32Array(vertices),
-    vertices.length/3,
-    false
+    vertices.length/3
   );
 
   let color = new Float32Array([0.5, 0.5, 0.5, 0.2]);

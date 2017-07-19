@@ -59,8 +59,7 @@ window.initMeshDraw = function (meshData) {
       ]),
       gfx.USAGE_STATIC,
       new Float32Array(verts),
-      data.positions.length / 3,
-      false
+      data.positions.length / 3
     );
 
     let ib = new gfx.IndexBuffer(
@@ -68,8 +67,7 @@ window.initMeshDraw = function (meshData) {
       gfx.INDEX_FMT_UINT16,
       gfx.USAGE_STATIC,
       new Uint16Array(data.indices),
-      data.indices.length,
-      false
+      data.indices.length
     );
 
     // normals
@@ -104,8 +102,7 @@ window.initMeshDraw = function (meshData) {
       ]),
       gfx.USAGE_STATIC,
       new Float32Array(nverts),
-      nverts.length / 3,
-      false
+      nverts.length / 3
     );
 
     // wireframe
@@ -115,8 +112,7 @@ window.initMeshDraw = function (meshData) {
       gfx.INDEX_FMT_UINT16,
       gfx.USAGE_STATIC,
       new Uint16Array(windices),
-      windices.length,
-      false
+      windices.length
     );
 
     let wprogram = new gfx.Program(device, {
