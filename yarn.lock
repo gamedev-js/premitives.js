@@ -298,9 +298,9 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-gfx.js@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/gfx.js/-/gfx.js-1.2.4.tgz#f86dcf702d277dcbfc51ce218c0fed1909964b8b"
+gfx.js@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/gfx.js/-/gfx.js-1.2.6.tgz#487e528a5e1a071f7d06174133fe23fbaaa58703"
 
 glob@^7.0.5:
   version "7.1.1"
@@ -406,9 +406,9 @@ ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
-input.js@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/input.js/-/input.js-1.1.2.tgz#cbe39e92b6151bcab2a4884b8f4096342589ca6e"
+input.js@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/input.js/-/input.js-1.1.6.tgz#059fe804de3e2507deb08d4c49bccac6d2cf7660"
 
 ip@^1.1.5:
   version "1.1.5"
@@ -522,9 +522,9 @@ loud-rejection@^1.0.0:
     currently-unhandled "^0.4.1"
     signal-exit "^3.0.0"
 
-lstats.js@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/lstats.js/-/lstats.js-1.2.5.tgz#1a3a30591dac37f5aded482fd45fd6cc73f31d2d"
+lstats.js@^1.2.7:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/lstats.js/-/lstats.js-1.2.7.tgz#8503f4c422162e4d4143a2995671d69f6bf28846"
 
 map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"

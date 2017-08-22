@@ -35,9 +35,9 @@
   "devDependencies": {
     "electron": "^1.7.3",
     "fs-jetpack": "^0.13.0",
-    "gfx.js": "^1.2.4",
-    "input.js": "^1.1.2",
-    "lstats.js": "^1.2.5",
+    "gfx.js": "^1.2.6",
+    "input.js": "^1.1.6",
+    "lstats.js": "^1.2.7",
     "preview-server": "^1.0.7",
     "rollup": "^0.41.4",
     "rollup-watch": "^3.2.2",
