@@ -6,3 +6,4 @@ export { default as plane } from './lib/plane';
 export { default as quad } from './lib/quad';
 export { default as sphere } from './lib/sphere';
 export { default as torus } from './lib/torus';
+export { default as capsule } from './lib/capsule';
